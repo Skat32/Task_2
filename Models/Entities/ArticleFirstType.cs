@@ -1,10 +1,14 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models.Entities
 {
     public class ArticleFirstType
     {
-        public Guid Id { get; set; }
+        [Key]
+        [ForeignKey("ArticleCommon")]
+        public int Id { get; set; }
 
         public string ArticleFirstTypeProperty { get; set; }
 
